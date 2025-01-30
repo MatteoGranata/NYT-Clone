@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchArticles } from "../redux/articleSlice";
-import Navbar from "../components/navBar/NavBar";
-import ErrorPage from "./ErrorPage";
 import { setSelectedSubsection } from "../redux/sectionsSlice";
+import Navbar from "../components/navBar/NavBar";
+import FooterPage from "../components/FooterPage";
+import ErrorPage from "./ErrorPage";
 
 function SectionPage() {
   const dispatch = useDispatch();
@@ -117,6 +118,7 @@ function SectionPage() {
               </ul>
             ))}
           </div>
+          <FooterPage />
         </div>
       </div>
     </>
