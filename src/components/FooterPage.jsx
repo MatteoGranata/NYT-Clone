@@ -84,7 +84,8 @@ function FooterPage() {
                     <li className="mb-1 whitespace-nowrap">
                       <a
                         className="text-black inline-block font-[franklin-700] w-[150px] text-[16px] h-6 leading-6 pb-0"
-                        href="/subscription"
+                        href="https://www.nytimes.com/subscription"
+                        target="blank"
                         data-testid="site-index-subscribe-list-link"
                       >
                         <svg
@@ -102,7 +103,8 @@ function FooterPage() {
                     <li className="mb-1 whitespace-nowrap">
                       <a
                         className="text-black inline-block font-[franklin-700] w-[150px] text-[16px] h-6 leading-6 pb-0"
-                        href="/account"
+                        href="https://www.nytimes.com/subscription"
+                        target="blank"
                         data-testid="site-index-subscribe-list-link"
                       >
                         <svg
@@ -127,6 +129,7 @@ function FooterPage() {
                       <a
                         className="text-black inline-block font-[franklin-700] w-[150px] text-[16px] h-6 leading-6 pb-0"
                         href="https://www.nytimes.com/subscription/home-delivery"
+                        target="blank"
                         data-testid="site-index-subscribe-list-link"
                       >
                         <svg
@@ -146,6 +149,7 @@ function FooterPage() {
                       <a
                         className="text-black inline-block font-[franklin-700] w-[150px] text-[16px] h-6 leading-6 pb-0"
                         href="https://www.nytimes.com/gift"
+                        target="blank"
                         data-testid="site-index-subscribe-list-link"
                       >
                         <svg
@@ -214,6 +218,7 @@ function FooterPage() {
               <span>This website is an unofficial replica of </span>
               <a
                 href="https://www.nytimes.com/"
+                target="blank"
                 className="text-[#666] font-[franklin-500] py-3 px-0 whitespace-nowrap hover:underline"
               >
                 <span>The New York Times</span>
@@ -230,6 +235,7 @@ function FooterPage() {
               <span>&#169; 2025 </span>
               <a
                 href="https://github.com/MatteoGranata"
+                target="blank"
                 className="text-[#666] font-[franklin-500] py-3 whitespace-nowrap hover:underline"
               >
                 <span>Matteo Granata</span>
@@ -246,6 +252,7 @@ function FooterPage() {
               </span>
               <a
                 href="https://granatamatteo.it"
+                target="blank"
                 className="text-[#666] font-[franklin-500] py-3 whitespace-nowrap hover:underline"
               >
                 <span>granatamatteo.it </span>
