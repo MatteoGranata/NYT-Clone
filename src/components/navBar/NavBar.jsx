@@ -150,9 +150,14 @@ const Navbar = () => {
                   <div className="w-full h-full bg-white fixed inset-0 z-[1000001] p-0 m-0 border-none max-h-full max-w-full  overflow-y-clip">
                     <button
                       onClick={() => setIsOpen(false)}
-                      className="text-[1.56rem] font-extrabold ml-6 mt-2 mb-4"
+                      className="w-8 h-8 ml-6 mt-4 mb-6"
                     >
-                      &#128937;
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path>
+                      </svg>
                     </button>
 
                     <SearchForm />
