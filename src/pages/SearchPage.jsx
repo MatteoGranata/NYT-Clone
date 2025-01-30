@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import NYTNavBar from "../components/navBar/NavBar";
+import NavBar from "../components/navBar/NavBar";
 import { setInputSearch } from "../redux/inputSlice";
 import { fetchSearch } from "../redux/searchSlice";
 import SearchForm from "../components/navBar/SearchForm";
@@ -60,7 +60,7 @@ function SearchPage() {
     <>
       <div className="justify-center flex">
         <div className="items-center flex flex-col m-0 max-w-[1200px] w-full">
-          <NYTNavBar onSearchChange={handleSearchChange} />
+          <NavBar onSearchChange={handleSearchChange} />
           <div className="bg-[#f7f7f7] w-full 2lg:px-0 px-[3%]">
             <div className=" flex flex-col w-full justify-center">
               <p className="text-gray-500 text-[.69rem] ml-2 mb-0">
