@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchArticles } from "../redux/articleSlice";
+import Navbar from "../components/navBar/NavBar";
 import ErrorPage from "./ErrorPage";
+import { setSelectedSubsection } from "../redux/sectionsSlice";
 
 function SectionPage() {
   const dispatch = useDispatch();
@@ -17,6 +19,11 @@ function SectionPage() {
     }
     dispatch(fetchArticles({ isSectionPage: true }));
   }, [dispatch, selectedSubsection, sectionName]);
+
+  const handleSubsectionChange = (subsection) => {
+    dispatch(setSelectedSubsection(subsection));
+    localStorage.setItem("section", subsection);
+  };
 
   if (loading) return;
 
@@ -44,6 +51,7 @@ function SectionPage() {
     <>
       <div className="justify-center flex 2lg:p-0 p-5 w-full">
         <div className="items-center flex flex-col m-0 max-w-[1200px] w-full">
+          <Navbar onSubsectionChange={handleSubsectionChange} />
           <div className="w-full h-full">
             <h2 className="text-[var(--color-content-primary,#121212)] flex-3 mt-3 font-[georgia] font-extrabold text-[32px] leading-8 -mb-1">
               {sectionName}
