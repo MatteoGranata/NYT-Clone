@@ -12,7 +12,7 @@ export const fetchTop = createAsyncThunk(
       return response.data.results;
     } catch (error) {
       return rejectWithValue(
-        error.status || error.response.statusText || error.message
+        error.status || error.response.statusText || error.message || "Uknow Error"
       );
     }
   }
