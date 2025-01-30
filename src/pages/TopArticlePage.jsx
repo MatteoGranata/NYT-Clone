@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTop } from "../redux/topArticleSlice";
+import ErrorPage from "./ErrorPage";
 
 function TopArticleList() {
   const dispatch = useDispatch();
@@ -10,7 +11,7 @@ function TopArticleList() {
     dispatch(fetchTop());
   }, [dispatch]);
   if (loading) return;
-  if (error) return <p>{error}</p>;
+  if (error) return <ErrorPage apiError={error} />;
 
   let groupCounter = 0;
   const groupedTopArticles = top.reduce((acc, item) => {

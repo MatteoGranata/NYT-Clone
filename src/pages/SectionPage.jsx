@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchArticles } from "../redux/articleSlice";
+import ErrorPage from "./ErrorPage";
 
 function SectionPage() {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ function SectionPage() {
 
   if (loading) return;
 
-  if (error) return <p>{error}</p>;
+  if (error) return <ErrorPage apiError={error} />;
 
   let groupCounter = 0;
   const groupedSection = articles.reduce((acc, item) => {

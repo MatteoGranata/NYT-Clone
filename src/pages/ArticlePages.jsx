@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchArticles } from "../redux/articleSlice";
+import ErrorPage from "./ErrorPage";
 
 function ArticleList() {
   const dispatch = useDispatch();
@@ -10,13 +11,13 @@ function ArticleList() {
     dispatch(fetchArticles());
   }, [dispatch]);
 
-  let groupCounter = 0; 
+  let groupCounter = 0;
   const groupeArticles = articles.reduce((acc, item) => {
     if (item.section === "podcasts") {
       const podcastGroupKey = `podcasts-${groupCounter}`;
-      groupCounter += 1; 
+      groupCounter += 1;
       acc[podcastGroupKey] = [item];
-      return acc; 
+      return acc;
     }
 
     let groupKey =
@@ -37,7 +38,8 @@ function ArticleList() {
   }, {});
 
   if (loading) return;
-  if (error) return <p>{error}</p>;
+  if (error) return <ErrorPage apiError={error} />;
+
   return (
     <ul className="w-full h-full">
       {Object.entries(groupeArticles).map(([group, articles]) => (
