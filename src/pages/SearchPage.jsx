@@ -4,7 +4,7 @@ import NYTNavBar from "../components/navBar/NavBar";
 import { setInputSearch } from "../redux/inputSlice";
 import { fetchSearch } from "../redux/searchSlice";
 import SearchForm from "../components/navBar/SearchForm";
-import numeral from "numeral";
+import numeral from "numeral"; 
 import FooterPage from "../components/FooterPage";
 import ErrorPage from "./ErrorPage";
 
