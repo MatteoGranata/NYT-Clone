@@ -18,7 +18,7 @@ export const fetchSearch = createAsyncThunk(
       return response.data.response.docs;
     } catch (error) {
       return rejectWithValue(
-        error.status || error.response.statusText || error.message || "Uknow Error"
+        error.status || error.response.statusText || error.message
       );
     }
   }

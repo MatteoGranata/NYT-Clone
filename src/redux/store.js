@@ -11,7 +11,7 @@ const store = configureStore({
     top: topReducer,
     sections: sectionReducer,
     search: searchReducer,
-    Input:inputReducer
+    input:inputReducer
   },
 });
 
