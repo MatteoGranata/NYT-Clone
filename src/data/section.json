@@ -1,0 +1,26 @@
+[
+    {
+        "name": "U.S.",
+        "params": "us"
+    },
+    {
+        "name": "World",
+        "params": "world"
+    },
+    {
+        "name": "Business",
+        "params": "business"
+    },
+    {
+        "name": "Arts",
+        "params": "arts"
+    },
+    {
+        "name": "Lifestyle",
+        "params": "lifestyle"
+    },
+    {
+        "name": "Opinion",
+        "params": "opinion"
+    }
+]

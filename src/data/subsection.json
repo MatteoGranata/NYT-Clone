@@ -1,0 +1,170 @@
+{
+    "us": [
+        {
+            "name": "U.S.",
+            "params": "us"
+        },
+        {
+            "name": "Politics",
+            "params": "politics"
+        },
+        {
+            "name": "New York",
+            "params": "nyregion"
+        },
+        {
+            "name": "Education",
+            "params": "education"
+        },
+        {
+            "name": "Health",
+            "params": "health"
+        },
+        {
+            "name": "Obituaries",
+            "params": "obituaries"
+        },
+        {
+            "name": "Science",
+            "params": "science"
+        },
+        {
+            "name": "Climate",
+            "params": "climate"
+        },
+        {
+            "name": "Weather",
+            "params": "weather"
+        },
+        {
+            "name": "Sports",
+            "params": "sports"
+        },
+        {
+            "name": "Business",
+            "params": "business"
+        },
+        {
+            "name": "Tech",
+            "params": "technology"
+        },
+        {
+            "name": "The Upshot",
+            "params": "upshot"
+        },
+        {
+            "name": "The Magazine",
+            "params": "magazine"
+        }
+    ],
+    "world": [
+        {
+            "name": "World",
+            "params": "world"
+        },
+        {
+            "name": "Science",
+            "params": "science"
+        },
+        {
+            "name": "Climate",
+            "params": "climate"
+        },
+        {
+            "name": "Weather",
+            "params": "weather"
+        },
+        {
+            "name": "Health",
+            "params": "health"
+        },
+        {
+            "name": "Obituaries",
+            "params": "obituaries"
+        }
+    ],
+    "business": [
+        {
+            "name": "Business",
+            "params": "business"
+        },
+        {
+            "name": "Tech",
+            "params": "technology"
+        },
+        {
+            "name": "Your Money",
+            "params": "your-money"
+        }
+    ],
+    "arts": [
+        {
+            "name": "Today's Arts",
+            "params": "arts"
+        },
+        {
+            "name": "Book Review",
+            "params": "books"
+        },
+        {
+            "name": "Movies",
+            "params": "movies"
+        },
+        {
+            "name": "Theater",
+            "params": "theater"
+        },
+        {
+            "name": "T Magazine",
+            "params": "t-magazine"
+        },
+        {
+            "name": "Visual Arts",
+            "params": "arts"
+        }
+    ],
+    "lifestyle": [
+        {
+            "name": "Well",
+            "params": "well"
+        },
+        {
+            "name": "Travel",
+            "params": "travel"
+        },
+        {
+            "name": "Style",
+            "params": "style"
+        },
+        {
+            "name": "Real Estate",
+            "params": "realestate"
+        },
+        {
+            "name": "Food",
+            "params": "food"
+        },
+        {
+            "name": "Love",
+            "params": "fashion"
+        },
+        {
+            "name": "Your Money",
+            "params": "your-money"
+        },
+        {
+            "name": "Personal Tech",
+            "params": "technology"
+        },
+        {
+            "name": "T Magazine",
+            "params": "t-magazine"
+        }
+    ],
+    "opinion": [
+        {
+            "name": "Opinion",
+            "params": "opinion"
+        }
+    ]
+}
