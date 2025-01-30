@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import SectionMenu from "./SectionMenu";
-import SearchForm from "./SearchFrom";
+import SearchForm from "./SearchForm";
 import { Link } from "react-router-dom";
 import MobileSection from "./MobileSectionMenuPage";
 

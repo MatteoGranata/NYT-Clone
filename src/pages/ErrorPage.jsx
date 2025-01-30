@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
-import Navbar from "../componets/navbar/NavBar";
-import FooterPage from "../componets/FooterPage";
+import Navbar from "../components/navBar/NavBar";
+import FooterPage from "../components/FooterPage";
 import { Link } from "react-router-dom";
 
 function ErrorPage({ apiError }) {
