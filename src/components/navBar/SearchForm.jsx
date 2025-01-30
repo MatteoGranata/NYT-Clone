@@ -74,7 +74,7 @@ function SearchForm({ value }) {
         </div>
         <button
           type="submit"
-          className={`rounded-[3px] font-[franklin-700] transition-colors whitespace-nowrap hover:bg-[rgb(86,123,149)] bg-[rgb(68,104,130)] border border-[rgb(50,104,145)] text-white text-[10px] uppercase h-8 m-0 pt-2 px-[9px] pb-[6px] align-middle ${
+          className={`rounded-[3px] font-[franklin-700] transition-colors whitespace-nowrap bg-[rgb(68,104,130)] border border-[rgb(50,104,145)] text-white text-[10px] uppercase h-8 m-0 pt-2 px-[9px] pb-[6px] align-middle ${
             (location.pathname === `/search/${value}` &&
               "bg-transparent bg-[#f7f7f7] border-none inline-block h-6 w-0 relative -top-2 -ml-[50px] hover:bg-[#f7f7f7] align-middle") ||
             (window.innerWidth < 1023 &&
