@@ -1,4 +1,5 @@
 import ArticleList from "./pages/ArticlePages";
+import TopArticleList from "./pages/TopArticlePage";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
             <ArticleList />
           </div>
           <div className="min-w-0 relative before:content=[''] before:h-full before:absolute before:left-[calc(-1rem-1px)] before:bottom-0 before:border-l before:border-l-[#C7C7C7]">
-            <ArticleList />
+            <TopArticleList />
           </div>
         </div>
       </div>
