@@ -1,35 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ArticleList from "./pages/ArticlePages";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="justify-center flex">
+      <div className="items-center flex flex-col m-0 max-w-[1200px] w-full">
+        <div className="grid 2lg:grid-cols-3 grid-cols-1 gap-8 p-4 2lg:p-0">
+          <div className=" 2lg:col-span-2 col-span-1">
+            <ArticleList />
+          </div>
+          <div className="min-w-0 relative before:content=[''] before:h-full before:absolute before:left-[calc(-1rem-1px)] before:bottom-0 before:border-l before:border-l-[#C7C7C7]">
+            <ArticleList />
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
