@@ -8,6 +8,7 @@ function ArticleList() {
   const { articles, loading, error } = useSelector((state) => state.articles);
 
   useEffect(() => {
+    document.title = "The New York Times Clone";
     dispatch(fetchArticles());
   }, [dispatch]);
 
