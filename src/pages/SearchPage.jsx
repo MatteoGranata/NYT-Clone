@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import NYTNavBar from "../components/navBar/NavBar";
 import { setInputSearch } from "../redux/inputSlice";
 import { fetchSearch } from "../redux/searchSlice";
-import SearchForm from "../components/navbar/SearchFrom";
+import SearchForm from "../components/navBar/SearchForm";
 import numeral from "numeral";
 import FooterPage from "../components/FooterPage";
 import ErrorPage from "./ErrorPage";
