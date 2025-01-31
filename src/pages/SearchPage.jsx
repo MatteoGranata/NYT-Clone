@@ -4,7 +4,7 @@ import NavBar from "../components/navBar/NavBar";
 import { setInputSearch } from "../redux/inputSlice";
 import { fetchSearch } from "../redux/searchSlice";
 import SearchForm from "../components/navBar/SearchForm";
-import numeral from "numeral"; 
+import numeral from "numeral";
 import FooterPage from "../components/FooterPage";
 import ErrorPage from "./ErrorPage";
 
@@ -71,7 +71,7 @@ function SearchPage() {
               </div>
             </div>
           </div>
-          <ul className="w-full h-fit 2lg:px-0 px-[3%]">
+          <ul className="w-full h-fit 2lg:px-0 px-[3%] ">
             {search.map((article) => {
               const image = findMultimedia(article.multimedia);
               return (
@@ -79,11 +79,11 @@ function SearchPage() {
                   key={article._id}
                   className="flex flex-col items-center pb-6 w-full border-t pt-6"
                 >
-                  <div className="flex flex-row w-full max-w-[840px]">
+                  <div className="flex flex-col xs:flex-row w-full max-w-[840px]">
                     <span className="min-w-32 text-[#999] font-[franklin-500] text-[.7rem] tracking-[0] leading-3 mb-[.7em]">
                       {formatDate(article.pub_date)}
                     </span>
-                    <div className="flex justify-between w-full m-0">
+                    <div className="flex w-full m-0">
                       <div className="m-0 max-w-[470px] p-0 border-none align-baseline">
                         <p className="font-[franklin-500] text-[.7rem] tracking-[.5px] leading-3 uppercase mb-1">
                           {article.section_name}

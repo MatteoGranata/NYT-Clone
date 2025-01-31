@@ -6,6 +6,7 @@ export default {
     extend: {
       screens: {
         "2lg": "1070px",
+        xs: "600px",
       },
       flex: {
         2: "0 0 91px",
