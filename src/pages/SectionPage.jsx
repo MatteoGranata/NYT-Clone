@@ -50,10 +50,10 @@ function SectionPage() {
 
   return (
     <>
-      <div className="justify-center flex 2lg:p-0 p-5 w-full">
+      <div className="justify-center flex w-full">
         <div className="items-center flex flex-col m-0 max-w-[1200px] w-full">
           <Navbar onSubsectionChange={handleSubsectionChange} />
-          <div className="w-full h-full">
+          <div className="w-full h-full 2lg:p-0 p-5">
             <h2 className="text-[var(--color-content-primary,#121212)] flex-3 mt-3 font-[georgia] font-extrabold text-[32px] leading-8 -mb-1">
               {sectionName}
             </h2>
