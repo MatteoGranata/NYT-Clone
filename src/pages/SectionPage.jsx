@@ -53,21 +53,21 @@ function SectionPage() {
       <div className="justify-center flex w-full">
         <div className="items-center flex flex-col m-0 max-w-[1200px] w-full">
           <Navbar onSubsectionChange={handleSubsectionChange} />
-          <div className="w-full h-full 2lg:p-0 p-5">
+          <div className="w-full flex flex-col items-center h-full xl:px-0 md:px-3 px-5">
             <h2 className="text-[var(--color-content-primary,#121212)] flex-3 mt-3 font-[georgia] font-extrabold text-[32px] leading-8 -mb-1">
               {sectionName}
             </h2>
             {Object.entries(groupedSection).map(([group, articles]) => (
               <ul
                 key={group}
-                className="grid grid-flow-row-dense grid-cols-1 2lg:grid-cols-3 grid-rows-3 gap-x-4 container mt-4"
+                className="grid grid-flow-row-dense grid-cols-1 lg:grid-cols-3 grid-rows-3 gap-x-4 container mt-4"
               >
                 {articles.map((article, index) => (
                   <li
                     key={article.url}
                     className={
                       index === 0
-                        ? "col-span-1 2lg:col-span-2 row-span-3 pr-4 2lg:border-r border-b 2lg:border-0 text-center"
+                        ? "col-span-1 lg:col-span-2 row-span-3 pr-4 lg:border-r border-b lg:border-0 text-center"
                         : "pl-4 last:border-none border-b h-full flex items-center"
                     }
                   >
