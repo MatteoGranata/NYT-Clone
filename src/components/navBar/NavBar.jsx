@@ -223,9 +223,7 @@ const Navbar = () => {
           </div>
         )}
       </header>
-      <div className="lg:block hidden">
-        <SectionMenu />
-      </div>
+      <SectionMenu />
       {location.pathname === "/" && (
         <>
           <span className="2lg:border-b border-0 border-black w-[97%] xl:w-full lg:pt-2 pt-0"></span>
