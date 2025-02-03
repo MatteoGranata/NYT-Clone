@@ -10,6 +10,7 @@ const SectionMenu = () => {
   const [fetchedSubSections, setFetchedSubSections] = useState([]);
   const [openSection, setOpenSection] = useState(null);
 
+  // Fetch subsections when a section is opened
   useEffect(() => {
     if (openSection) {
       const selectedSubSections = subsection[openSection.params] || [];
@@ -28,6 +29,7 @@ const SectionMenu = () => {
   return (
     <div className="w-full mt-5">
       <nav className="h-full block">
+        {/* Home Link  */}
         <div className="border-b border-[#DFDFDF] my-0 mx-6">
           <li className=" cursor-pointer font-[franklin-700] text-[1.1rem] leading-6 list-none">
             <Link
@@ -47,6 +49,7 @@ const SectionMenu = () => {
             </Link>
           </li>
         </div>
+        {/* Sectios */}
         {sections.map((section) => (
           <div
             key={section.params}
@@ -70,7 +73,7 @@ const SectionMenu = () => {
                   ></polygon>
                 </svg>
               </button>
-
+              {/* Subsections */}
               <div className="bg-white cursor-default pb-1 mt-5 block">
                 {openSection === section && (
                   <>
