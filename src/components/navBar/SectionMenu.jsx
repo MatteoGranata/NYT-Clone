@@ -11,7 +11,6 @@ const SectionMenu = () => {
   const [openSection, setOpenSection] = useState(null);
 
   useEffect(() => {
-    // Update fetched subsections when a section is opened
     if (openSection) {
       const selectedSubSections = subsection[openSection.params] || [];
       setFetchedSubSections(selectedSubSections);
@@ -31,7 +30,7 @@ const SectionMenu = () => {
   return (
     <>
       <div className="w-full" onMouseLeave={() => handleSectionClick()}>
-        <nav className={"flex space-x-4 py-0 px-4 w-full justify-center"}>
+        <nav className="flex space-x-4 py-0 px-4 w-full justify-center">
           {sections.map((section) => (
             <div className="flex items-center" key={section.params}>
               <button
