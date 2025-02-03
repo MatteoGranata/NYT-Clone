@@ -21,6 +21,7 @@ function SectionPage() {
     dispatch(fetchArticles({ isSectionPage: true }));
   }, [dispatch, selectedSubsection, sectionName]);
 
+  // updates the selected subsection and stores it in localstorage
   const handleSubsectionChange = (subsection) => {
     dispatch(setSelectedSubsection(subsection));
     localStorage.setItem("section", subsection);
@@ -31,6 +32,7 @@ function SectionPage() {
   if (error) return <ErrorPage apiError={error} />;
 
   let groupCounter = 0;
+  // groups articles into sets of up 4 per group, skippink "admin" section
   const groupedSection = articles.reduce((acc, item) => {
     let groupKey = `group-${groupCounter}`;
 
@@ -89,8 +91,8 @@ function SectionPage() {
                             <img
                               src={
                                 index === 0
-                                  ? article.multimedia[0]?.url
-                                  : article.multimedia[2]?.url ||
+                                  ? article.multimedia[0]?.url // main image for the frist article
+                                  : article.multimedia[2]?.url || // Smaller images for other articles
                                     article.multimedia[1]?.url
                               }
                               className={`object-cover mb-2 w-full ${

@@ -5,15 +5,19 @@ import { Link } from "react-router-dom";
 import MobileSection from "./MobileSectionMenuPage";
 
 const Navbar = () => {
+  // State for showing/hide the search form
   const [showForm, setShowForm] = useState(false);
+  // state for detecting mobile view, with initial value from localStorage
   const [isMobile, setIsMobile] = useState(() => {
     return (
       localStorage.getItem("isMobile") === "true" || window.innerWidth < 1023
     );
   });
+  // State for handling mobile menu visibility
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    // Function to handle screen resize and update mobile state
     const handleResize = () => {
       const mobile = window.innerWidth < 1023;
       setIsMobile(mobile);
@@ -29,6 +33,7 @@ const Navbar = () => {
   return (
     <header className="m-auto relative block w-full xl:px-0 sm:px-[1%] px-[3%]">
       <div className="border-b mb-1 border-black">
+        {/* Desktop Navbar */}
         {!isMobile ? (
           <div
             className={
@@ -58,6 +63,7 @@ const Navbar = () => {
                   {showForm && <SearchForm />}
                 </div>
               </div>
+              {/* Subscription and Login Buttons */}
               <div className="flex space-x-4 font-bold">
                 <span className="rounded-[3px] border cursor-pointer whitespace-nowrap align-middle bg-[rgb(86,123,149)] border-[rgb(50,104,145)] text-[11px] leading-3 tracking-wider uppercase py-2 px-3 pb-2 inline-block text-[rgb(255,255,255)] hover:bg-[rgb(68,104,130)]">
                   <a target="blank" href="https://www.nytimes.com/subscription">
@@ -78,7 +84,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Barra principale */}
+            {/* Main Navigation Bar */}
             <div className="py-1 w-full">
               <div className="flex justify-between w-full">
                 <span className="w-fit flex flex-col text-[0.875rem]">
@@ -109,6 +115,7 @@ const Navbar = () => {
             <SectionMenu />
           </div>
         ) : (
+          // Mobile Navbar
           <div className="h-full w-full ">
             <section className="bg-white pt-[10px] px-4 pb-[6px] border-b border-b-[#e2e2e2] h-fit relative block">
               <div className="flex justify-around left-[10px] absolute">
@@ -168,6 +175,7 @@ const Navbar = () => {
                   </div>
                 )}
               </div>
+              {/* Mobile Header */}
               <div className="pt-0 text-center">
                 <Link to={"/"} className="w-56 h-8 mx-auto mt-1 mb-0 block">
                   <svg viewBox="0 0 184 25" fill="#000000" aria-hidden="true">

@@ -11,6 +11,7 @@ const SectionMenu = () => {
   const [openSection, setOpenSection] = useState(null);
 
   useEffect(() => {
+    // Update fetched subsections when a section is opened
     if (openSection) {
       const selectedSubSections = subsection[openSection.params] || [];
       setFetchedSubSections(selectedSubSections);
@@ -24,7 +25,7 @@ const SectionMenu = () => {
     }, 200);
   };
   const handleSubsectionChange = (subsection) => {
-    dispatch(setSelectedSubsection(subsection)); 
+    dispatch(setSelectedSubsection(subsection));
   };
 
   return (

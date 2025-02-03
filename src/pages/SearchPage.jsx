@@ -15,13 +15,15 @@ function SearchPage() {
 
   useEffect(() => {
     document.title = "Search - The New York Times Clone";
+    // Fetch search results when the page loads
     dispatch(fetchSearch({ isSearchPage: true }));
   }, [dispatch, selectedValue]);
 
+  // Update the search input value in the Redux store
   const handleSearchChange = (inputValue) => {
     dispatch(setInputSearch(inputValue));
   };
-
+  // formats the date to display differently if older than a year
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     const now = new Date();
@@ -34,6 +36,7 @@ function SearchPage() {
 
     return isOlderThanYear ? `${month}. ${day}, ${year}` : `${month}. ${day}`;
   };
+  // formats the date to always include the year
   const formatDateYear = (dateString) => {
     const date = new Date(dateString);
 
@@ -45,9 +48,9 @@ function SearchPage() {
   };
 
   const value = selectedValue || "";
-
+  // retrieve the number of search results
   const hits = localStorage.getItem("hits");
-
+  // find the correct multimedia image for an article
   const findMultimedia = (multimedia) => {
     const image = multimedia.find((img) => img.subtype === "jumbo");
     return image ? image.url : null;
@@ -102,7 +105,7 @@ function SearchPage() {
                           <p className="text-[#121212] font-[cheltenham] text-[.75rem] tracking-[.2px] leading-3">
                             {article.byline.original}
                           </p>
-
+                          {/* Displays print edition details if available */}
                           {article.headline.print_headline && (
                             <span className="min-w-fit font-[cheltenham] leading-4 text-[1rem] mr-1 block w-[150%] max-w-[360px]">
                               <div className="border w-20 my-4 h-0"></div>
@@ -122,6 +125,7 @@ function SearchPage() {
                           )}
                         </a>
                       </div>
+                      {/* Displays article image if available */}
                       <div className="min-w-[120px] ml-10 block w-52 h-[134px] overflow-hidden relative">
                         <img
                           className="h-auto w-full align-top object-fill object-center"

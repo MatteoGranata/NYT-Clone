@@ -13,6 +13,7 @@ function ArticleList() {
   }, [dispatch]);
 
   let groupCounter = 0;
+  // Group articles based on section or subsection
   const groupeArticles = articles.reduce((acc, item) => {
     if (item.section === "podcasts") {
       const podcastGroupKey = `podcasts-${groupCounter}`;
@@ -22,7 +23,7 @@ function ArticleList() {
     }
 
     let groupKey =
-      item.org_facet[(0, 2)] || item.org_facet[(1, 3)]
+      item.org_facet?.[0] || item.org_facet?.[1]
         ? item.subsection
         : item.section || item.item_type;
 
@@ -68,14 +69,21 @@ function ArticleList() {
                     <h1 className="font-[nyt-cheltenham] text-[1rem] leading-5 m-0 text-[#121212] hover:text-[#5A5A5A]">
                       {item.title}
                     </h1>
-                    {index === 0 && item.section != "podcasts" && (
+                    {index === 0 && item.section !== "podcasts" && (
                       <p className="text-[#5a5a5a] font-[imperial] text-[.87rem] leading-5 m-0 p-0 mt-2">
                         {item.abstract}
                       </p>
                     )}
-                    {item.section == "podcasts" && (
+                    {item.section === "podcasts" && (
                       <p className="w-fit h-fit px-[1.2%] rounded-full border relative -top-3 hover:bg-[rgb(229 229 229 / var(--tw-bg-opacity, 1)]">
-                        &#11208;
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path>
+                        </svg>
                       </p>
                     )}
                   </a>

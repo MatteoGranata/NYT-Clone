@@ -60,6 +60,7 @@ function SearchForm({ value }) {
             (window.innerWidth < 1023 && "block w-full")
           }`}
         >
+          {/* Search input field */}
           <input
             value={inputValue}
             onChange={handleInputChange}
@@ -72,6 +73,7 @@ function SearchForm({ value }) {
             }`}
           />
         </div>
+        {/* Submit button */}
         <button
           type="submit"
           className={`rounded-[3px] font-[franklin-700] transition-colors whitespace-nowrap bg-[rgb(68,104,130)] border border-[rgb(50,104,145)] text-white text-[10px] uppercase h-8 m-0 pt-2 px-[9px] pb-[6px] align-middle ${
@@ -93,6 +95,7 @@ function SearchForm({ value }) {
           )}
         </button>
       </form>
+      {/* Sorting option dropdown */}
       {location.pathname === `/search/${value}` && (
         <div className="border-transparent rounded inline-block mb-1 mr-3 p-[6px]">
           <select

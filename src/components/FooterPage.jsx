@@ -6,6 +6,7 @@ import { setSelectedSubsection } from "../redux/sectionsSlice";
 
 function FooterPage() {
   const dispatch = useDispatch();
+  // Determine if the screen is mobile-sixed
   const [isMobile, setIsMobile] = useState(() => {
     return (
       localStorage.getItem("isMobile") === "true" || window.innerWidth < 1150
@@ -16,6 +17,7 @@ function FooterPage() {
 
   useEffect(() => {
     setSections(footerSection);
+    // handle screen resize to update mobile state
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1150);
     };
@@ -25,10 +27,11 @@ function FooterPage() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  // toggle section visibility
   const handleSectionClick = (section) => {
     setOpenSection((prevSection) => (prevSection === section ? null : section));
   };
-
+// Dispatch selected subsection
   const handleSubsectionChange = (footerSection) => {
     dispatch(setSelectedSubsection(footerSection));
   };

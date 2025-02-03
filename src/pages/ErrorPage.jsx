@@ -16,6 +16,7 @@ function ErrorPage({ apiError }) {
   return (
     <div className="justify-center flex">
       <div className="items-center flex flex-col m-0 max-w-[1200px] w-full">
+        {/* Show Navbar only if not on the home page  */}
         {location.pathname !== "/" && <Navbar />}
         <div className="p-2 flex flex-col items-center justify-center h-80 my-10">
           <div className="flex flex-col items-center justify-evenly h-full text-center">
@@ -40,6 +41,7 @@ function ErrorPage({ apiError }) {
             )}
           </div>
         </div>
+        {/* Show Footer only if not on the home page */}
         {location.pathname !== "/" && <FooterPage />}
       </div>
     </div>
