@@ -31,17 +31,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="m-auto relative block w-full xl:px-0 sm:px-[1%] px-[3%]">
-      <div className="border-b mb-1 border-black">
+    <>
+      <header className="m-auto relative block w-full xl:px-0 sm:px-[1%] px-[3%]">
         {/* Desktop Navbar */}
         {!isMobile ? (
-          <div
-            className={
-              location.pathname === "/"
-                ? "border-b mb-1 border-black"
-                : undefined
-            }
-          >
+          <div>
             <div className="pb-2 flex justify-between items-center">
               <div className="flex space-x-4 mt-1">
                 <div className="relative inline-block">
@@ -112,7 +106,6 @@ const Navbar = () => {
                 <span className="w-2/12"></span>
               </div>
             </div>
-            <SectionMenu />
           </div>
         ) : (
           // Mobile Navbar
@@ -229,14 +222,19 @@ const Navbar = () => {
             </section>
           </div>
         )}
+      </header>
+      <div className="lg:block hidden">
+        <SectionMenu />
       </div>
-
       {location.pathname === "/" && (
-        <p className="w-full h-fit text-sm lg:flex justify-end pr-[7%] leading-[1.2em] font-[franklin-700] text-[.81rem] hidden">
-          Most viewed articles of the last 7 days
-        </p>
+        <>
+          <span className="2lg:border-b border-0 border-black w-full lg:pt-2 pt-0"></span>
+          <p className="w-full h-fit text-sm 2lg:flex justify-end pr-[7%] leading-[1.2em] font-[franklin-700] text-[.81rem] hidden border-t border-black pt-4 mt-1">
+            Most viewed articles of the last 7 days
+          </p>
+        </>
       )}
-    </header>
+    </>
   );
 };
 
