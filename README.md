@@ -30,7 +30,9 @@ This project was developed for [Start2impact University](https://www.start2impac
 3. Rename the `.env.example` file to `.env` and add your New York Times API key.
    You can obtain an API key by registering at [New York Times Developer Network](https://developer.nytimes.com/get-started)
 
-`VITE_NYT_API_KEY = your api key`
+```bash
+VITE_NYT_API_KEY = your api key
+```
 
 4. Start the server
 
