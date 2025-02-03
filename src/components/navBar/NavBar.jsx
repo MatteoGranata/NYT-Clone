@@ -228,8 +228,8 @@ const Navbar = () => {
       </div>
       {location.pathname === "/" && (
         <>
-          <span className="2lg:border-b border-0 border-black w-full lg:pt-2 pt-0"></span>
-          <p className="w-full h-fit text-sm 2lg:flex justify-end pr-[7%] leading-[1.2em] font-[franklin-700] text-[.81rem] hidden border-t border-black pt-4 mt-1">
+          <span className="2lg:border-b border-0 border-black w-[97%] xl:w-full lg:pt-2 pt-0"></span>
+          <p className="w-[97%] xl:w-full h-fit text-sm 2lg:flex justify-end pr-[5%] leading-[1.2em] font-[franklin-700] text-[.81rem] hidden border-t border-black pt-4 mt-1">
             Most viewed articles of the last 7 days
           </p>
         </>
