@@ -12,7 +12,7 @@ function App() {
           <div className=" 2lg:col-span-2 col-span-1">
             <ArticleList />
           </div>
-          <div className="min-w-0 relative before:content=[''] before:h-full before:absolute before:left-[calc(-1rem-1px)] before:bottom-0 before:border-l before:border-l-[#C7C7C7]">
+          <div className="2lg:block hidden min-w-0 relative before:content=[''] before:h-full before:absolute before:left-[calc(-1rem-1px)] before:bottom-0 before:border-l before:border-l-[#C7C7C7]">
             <TopArticleList />
           </div>
         </div>
