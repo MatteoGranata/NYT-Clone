@@ -3,7 +3,7 @@ import axios from "axios";
 
 const API_KEY = import.meta.env.VITE_NYT_API_KEY;
 const BASE_URL = import.meta.env.VITE_NYT_TOP_API_BASE_URL;
-
+// Async thunk to fetch top articles from the API
 export const fetchTop = createAsyncThunk(
   "top/fetchTop",
   async (_, { rejectWithValue }) => {
@@ -12,12 +12,15 @@ export const fetchTop = createAsyncThunk(
       return response.data.results;
     } catch (error) {
       return rejectWithValue(
-        error.status || error.response.statusText || error.message || "Uknow Error"
+        error.status ||
+          error.response.statusText ||
+          error.message ||
+          "Uknow Error"
       );
     }
   }
 );
-
+// Redux slice to manage top articles state
 const topSlice = createSlice({
   name: "top",
   initialState: {
@@ -26,6 +29,7 @@ const topSlice = createSlice({
     error: null,
   },
   reducers: {},
+  // Handle async top articles actions using extraReducers
   extraReducers: (builder) => {
     builder
       .addCase(fetchTop.pending, (state) => {

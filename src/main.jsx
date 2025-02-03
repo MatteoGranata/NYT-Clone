@@ -8,18 +8,18 @@ import App from "./App.jsx";
 import SectionPage from "./pages/SectionPage.jsx";
 import SearchPage from "./pages/SearchPage.jsx";
 import "./index.css";
-
+// Define application routes using React Router
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/", // Root path
     element: <App />,
   },
   {
-    path: "/section/:sectionID",
+    path: "/section/:sectionID", // Dynamic route for section pages
     element: <SectionPage />,
   },
   {
-    path: "/search/:searchID",
+    path: "/search/:searchID", // Dynamic route for search results
     element: <SearchPage />,
   },
 ]);
