@@ -29,7 +29,7 @@ const SectionMenu = () => {
 
   return (
     <>
-      <div className="w-full sticky top-0 z-50 bg-white" onMouseLeave={() => handleSectionClick()}>
+      <div className="w-full hidden lg:block sticky top-0 z-50 bg-white" onMouseLeave={() => handleSectionClick()}>
         <nav className="flex space-x-4 py-0 px-4 w-full justify-center">
           {sections.map((section) => (
             <div className="flex items-center" key={section.params}>
