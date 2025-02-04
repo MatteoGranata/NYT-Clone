@@ -13,7 +13,7 @@ function ArticleList() {
   }, [dispatch]);
 
   let groupCounter = 0;
-  // Group articles based on section or subsection
+  // Group articles based on groupKey
   const groupeArticles = articles.reduce((acc, item) => {
     if (item.section === "podcasts") {
       const podcastGroupKey = `podcasts-${groupCounter}`;
@@ -22,10 +22,23 @@ function ArticleList() {
       return acc;
     }
 
-    let groupKey =
-      item.org_facet?.[0] || item.org_facet?.[1]
-        ? item.subsection
-        : item.section || item.item_type;
+    const groupKey =
+      item.section ||
+      item.subsection ||
+      (Array.isArray(item.des_facet) && item.des_facet.length
+        ? item.des_facet.join(", ")
+        : "") ||
+      (Array.isArray(item.geo_facet) && item.geo_facet.length
+        ? item.geo_facet.join(", ")
+        : "") ||
+      (Array.isArray(item.org_facet) && item.org_facet.length
+        ? item.org_facet.join(", ")
+        : "") ||
+      (Array.isArray(item.per_facet) && item.per_facet.length
+        ? item.per_facet.join(", ")
+        : "") ||
+      item.item_type ||
+      "unknown";
 
     let uniqueGroupKey = `${groupKey}-${groupCounter}`;
 
