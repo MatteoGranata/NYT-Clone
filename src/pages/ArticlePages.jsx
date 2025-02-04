@@ -63,7 +63,7 @@ function ArticleList() {
           className={
             articles[0].section === "podcasts"
               ? "flex container xl:mb-6 md:mb-3 mb-0"
-              : "xl:pb-9 md:pb-5 pb-0 grid 2md:grid-cols-3 grid-cols-1 gap-4 container"
+              : "xl:pb-9 md:pb-5 pb-2 grid 2md:grid-cols-3 grid-cols-1 gap-4 container"
           }
         >
           <ul className="pl-4 order-1">
