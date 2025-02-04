@@ -210,10 +210,10 @@ const Navbar = () => {
                   })}
                 </div>
               </div>
-              <div className="block min-h-[10px] text-[10px] ml-auto uppercase">
+              <div className="block wmin-h-[10px] text-[10px] ml-auto">
                 <span>
                   <a href="https://www.nytimes.com/subscription">
-                    <span className="font-[franklin-700] text-[13px] leading-3 rounded-[3px] py-2.5 px-3 h-fit whitespace-nowrap align-middle border border-black inline-block">
+                    <span className="font-[franklin-700] text-[13px] leading-3 rounded-[3px] pb-2 pt-1.5 px-3 h-fit whitespace-nowrap align-middle border border-black inline-block">
                       Subscribe for €0.50/week
                     </span>
                   </a>
