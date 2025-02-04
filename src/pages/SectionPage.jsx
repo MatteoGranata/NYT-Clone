@@ -101,15 +101,15 @@ function SectionPage() {
                             />
                           )}
                         </ul>
-                        <div>
+                        <div className={index === 0 ? "ml-3" : null}>
                           <h3
-                            className={`font-semibold mb-2 leading-none font-[nyt-cheltenham] ${
+                            className={`font-semibold mb-2 leading-none font-[nyt-cheltenham] text-start ${
                               index === 0 ? "text-2xl" : " text-lg"
                             }`}
                           >
                             {article.title}
                           </h3>
-                          <p className="text-sm font-[imperial]">
+                          <p className="text-sm font-[imperial] text-start">
                             {article.abstract}
                           </p>
                         </div>
