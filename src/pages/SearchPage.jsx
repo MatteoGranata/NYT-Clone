@@ -126,13 +126,15 @@ function SearchPage() {
                         </a>
                       </div>
                       {/* Displays article image if available */}
-                      <div className="min-w-[120px] ml-10 block w-52 h-[134px] overflow-hidden relative">
-                        <img
-                          className="h-auto w-full align-top object-fill object-center"
-                          src={`https://static01.nyt.com/${image}`}
-                          alt=""
-                        />
-                      </div>
+                      {image && (
+                        <div className="min-w-[120px] ml-10 block w-52 h-[134px] overflow-hidden relative">
+                          <img
+                            className="h-auto w-full align-top object-fill object-center"
+                            src={`https://static01.nyt.com/${image}`}
+                            alt=""
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </li>
