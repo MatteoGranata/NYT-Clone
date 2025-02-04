@@ -75,11 +75,11 @@ function ArticleList() {
                       </p>
                     )}
                     {item.section === "podcasts" && (
-                      <p className="w-fit h-fit px-[1.2%] rounded-full border relative -top-3 hover:bg-[rgb(229 229 229 / var(--tw-bg-opacity, 1)]">
+                      <p className="w-fit h-fit p-1.5 rounded-full border relative -top-3 hover:bg-[rgb(229,229,229)]">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
+                          width="13"
+                          height="13"
                           viewBox="0 0 24 24"
                         >
                           <path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path>

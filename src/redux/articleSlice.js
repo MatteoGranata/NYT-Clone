@@ -16,6 +16,7 @@ export const fetchArticles = createAsyncThunk(
       : ARTICLE_URL;
     try {
       const response = await axios.get(`${BASE_URL}?api-key=${API_KEY}`);
+      console.log ("article",response.data.results)
       localStorage.setItem("sectionName", response.data.section); 
       return response.data.results;
     } catch (error) {
