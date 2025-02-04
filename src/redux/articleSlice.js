@@ -16,8 +16,7 @@ export const fetchArticles = createAsyncThunk(
       : ARTICLE_URL;
     try {
       const response = await axios.get(`${BASE_URL}?api-key=${API_KEY}`);
-      console.log ("article",response.data.results)
-      localStorage.setItem("sectionName", response.data.section); 
+      localStorage.setItem("sectionName", response.data.section);
       return response.data.results;
     } catch (error) {
       return rejectWithValue(
@@ -38,17 +37,17 @@ const articleSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-     // Handle loading state when fetching articles
+      // Handle loading state when fetching articles
       .addCase(fetchArticles.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-        // Update state with fetched articles when request succeeds
+      // Update state with fetched articles when request succeeds
       .addCase(fetchArticles.fulfilled, (state, action) => {
         state.loading = false;
         state.articles = action.payload;
       })
-        // Handle errors if the API request fails
+      // Handle errors if the API request fails
       .addCase(fetchArticles.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
