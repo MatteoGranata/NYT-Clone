@@ -55,8 +55,8 @@ function SectionPage() {
       <div className="justify-center flex w-full">
         <div className="items-center flex flex-col m-0 max-w-[1200px] w-full">
           <Navbar onSubsectionChange={handleSubsectionChange} />
-          <div className="w-full flex flex-col items-center h-full xl:px-0 md:px-3 px-5">
-            <h2 className="text-[var(--color-content-primary,#121212)] flex-3 mt-3 font-[georgia] font-extrabold text-[32px] leading-8 -mb-1">
+          <div className="w-fit flex flex-col items-center h-full xl:px-0 md:px-3 px-5">
+            <h2 className="w-full text-[var(--color-content-primary,#121212)] flex-3 mt-3 font-[georgia] font-extrabold text-[32px] leading-8 -mb-1">
               {sectionName}
             </h2>
             {Object.entries(groupedSection).map(([group, articles]) => (
